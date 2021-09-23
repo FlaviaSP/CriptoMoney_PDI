@@ -1,0 +1,111 @@
+<div class="div-principal">
+
+  <div class="menu font-principal" >
+    
+    <img
+      alt="InvertCripto"
+      class="logo"
+      src="assets/img/logo2.png"/>
+      <p class="menu-text">InvertCripto</p>
+    
+  
+   
+    <img
+    class="cambio"
+    alt="Cambio"
+    src="assets/img/cambio.png"/>
+    <p class="cambio-text">Câmbio</p>
+    
+
+  <img
+      class="carteira"
+      alt="Carteira"
+      src="assets/img/carteira.png"/>
+      <p class="carteira-text">Carteiras</p>
+
+  <img
+    class="configuracao"
+    alt="Configuracao"
+    src="assets/img/configuracao.png"/>  
+    <p class="configuracao-text">Configurações</p>
+
+  <img
+      class="ajuda"
+      alt="ajuda"
+      src="assets/img/ajuda.png"/> 
+      <p class="ajuda-text">Ajuda</p>
+    
+  </div>
+
+
+  <div class="margin-top-20 ">
+  <div class="inline-block width-40">
+    <p class="bemvindo bemvindo2">Bem vindo</p>
+    <p class="titulo">Um simples conversor de Criptomoedas para o Real Brasileiro.</p>
+    <p class="texto2">Uma criptomoeda ou cibermoeda é um meio de troca,<br>
+    Podendo ser centralizado ou descentralizado que se <br>
+    utiliza da tecnologia de blockchain e da criptografia<br>
+    para assegurar a validade das transações e a criação<br>
+    de novas unidades da moeda.</p>
+
+    <div class="botao-vamos">
+      <button class="texto-botao">Vamos converter</button>
+    <img src="assets/img/seta.png">
+    </div>
+  </div>
+  <div  class="inline-block width-40 img">
+    <img src="assets/img/myProjetCriptoMoney.png">
+  </div>
+  </div>
+
+  <div class="linha">
+    <hr/>
+  </div>
+
+  <fieldset class="fieldset">
+    
+      <p class="tabela-texto">Converta sua moeda</p>
+      <div class="inline-block">
+        <input type="text" class="input" [(ngModel)]="valor">
+        <div class="botao-converter">
+          <button class="texto-converte" (click)="converter()">Converter</button>
+        </div>
+        
+      </div>
+    <div class="tabela-principal">
+    <table class="table">
+      <thead class="azul font-principal">
+        <tr>
+          <th *ngFor="let titulo of titulos">
+            {{titulo}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let moeda of moedas">
+  
+            <td>
+              <img [src]="moeda.image" alt="{{moeda.name}}" style="width: 2rem;">
+              <span>
+                {{moeda.name}}
+              </span>
+              <span>
+                {{moeda.symbol}}
+              </span>
+            </td>
+            <td>
+              {{moeda.current_price.toLocaleString("pt-BR", { minimumFractionDigits: 6 })}}
+            </td>
+            <td>
+              {{moeda.price_change_percentage_24h.toLocaleString()}}
+            </td>
+            <td>
+              {{moeda.total_volume.toLocaleString()}}
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </fieldset>
+
+</div>
