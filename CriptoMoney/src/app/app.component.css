@@ -167,8 +167,13 @@ border-radius: 6px;
   
 width: 100px;
 height: 40px;
-left: 594px;
 top: 950px;
+
+top: 963px;
+font-family: Circular Std;
+font-weight: bold;
+background-color: #232946;
+color: #FFFFFF;
 
 background: #232946;
 border-radius: 5px;
@@ -200,16 +205,27 @@ line-height: 15px;
 
 color: #FFFFFF;
 }
-  .azul {
+ 
+.table {
+  width: 1100px;
+  margin-left: -32px;
+}
+
+.cabecalho {
+  color: rgb(243, 237, 237);
     background: #232946;
-  }
+}
 
  .font-principal {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: rgb(243, 237, 237);
+  color: rgb(243, 237, 237);
+    background: #232946;
+    width: 1100px;
+    
  }
 
+.border-radius-8 {
+  border-radius: 8px;
+}
 
  .margin-top-20 {
      margin-top: 20%;
@@ -224,6 +240,7 @@ color: #FFFFFF;
      margin-left: 50%;
  }
 
+ 
 .margin-left-2 {
     margin-left: 2%;
 }
@@ -234,6 +251,10 @@ color: #FFFFFF;
     margin-right: auto;
 }
 
+
+.inline-flex {
+  display: inline-flex;
+} 
 
 .inline-block {
   display: inline-block;
@@ -361,21 +382,18 @@ color: #FFFFFF;
 }
 
 .input {
-  position: absolute;
 width: 392px;
 height: 40px;
-left: 184px;
-
-
 background: #FFFFFF;
 border: 1px solid #232946;
 box-sizing: border-box;
 border-radius: 6px;
 }
+
 .fieldset {
   position: absolute;
 width: 1100px;
-height: 798px;
+height: 755px;
 left: 170px;
 top: 902px;
 
@@ -395,26 +413,22 @@ border-radius: 50px;
 }
 
 .texto-converte {
-  
-
-
 top: 963px;
-
 font-family: Circular Std;
-
 font-weight: bold;
-
-
 background-color: #232946;
 color: #FFFFFF;
 }
 
+.margin-left-16 {
+  margin-left: 16%;
+}
 .tabela-principal {
   position: absolute;
 width: 1060px;
 height: 798px;
 left: 30px;
-top: 130px;
+top: 160px;
 }
 
 
@@ -428,6 +442,17 @@ top: 130px;
   }
 
   
-  
+.paginacao {
+  background-color: #232946;
+  height: 45px;
+  text-align: right;
+  padding: 5px;
+  width: 1100px;
+  margin-left: -32px;
+  color: #FFEECF;
+  border-radius: 8px;
+}
  
+
+
   

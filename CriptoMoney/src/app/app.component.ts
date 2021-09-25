@@ -20,6 +20,8 @@ interface Moeda {
 
 export class AppComponent implements OnInit {
  
+  public paginaAtual = 1;
+
   @Input()
   valor?: number 
   
@@ -27,12 +29,7 @@ export class AppComponent implements OnInit {
   moeda: string = 'brl'
 
   moedas: Moeda[] = []
-  titulos: string[]= [
-    'Coin',
-    'Price',
-    'Price Change',
-    '24h Volume',
-  ]
+  
 
   constructor(private http: HttpClient) {}
 

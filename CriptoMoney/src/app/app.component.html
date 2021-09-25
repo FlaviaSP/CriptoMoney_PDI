@@ -1,6 +1,6 @@
 <div class="div-principal">
 
-  <div class="menu font-principal" >
+  <div class="menu cabecalho" >
     
     <img
       alt="InvertCripto"
@@ -62,28 +62,39 @@
     <hr/>
   </div>
 
+  
   <fieldset class="fieldset">
-    
+    <div class="margin-top-5 margin-left-2">
       <p class="tabela-texto">Converta sua moeda</p>
-      <div class="inline-block">
-        <input type="text" class="input" [(ngModel)]="valor">
-        <div class="botao-converter">
-          <button class="texto-converte" (click)="converter()">Converter</button>
-        </div>
+      <div class="inline-flex">
         
+        <input type="text" class="input" [(ngModel)]="valor">
+
+        <div class="">
+          <button class="botao-converter margin-left-16" (click)="converter()">Converter</button>
+        </div>
       </div>
+    </div>
     <div class="tabela-principal">
-    <table class="table">
-      <thead class="azul font-principal">
-        <tr>
-          <th *ngFor="let titulo of titulos">
-            {{titulo}}
+    <table class="table ">
+      <thead class="font-principal ">
+        <tr class="border-radius-8">
+          <th >
+            Coin
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Price Change
+          </th>
+          <th>
+            24h Volume
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let moeda of moedas">
-  
+        <tr *ngFor="let moeda of moedas | paginate: { itemsPerPage: 10, currentPage: paginaAtual }; let i = index">
             <td>
               <img [src]="moeda.image" alt="{{moeda.name}}" style="width: 2rem;">
               <span>
@@ -105,6 +116,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="paginacao">
+      <pagination-controls class="write" (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+    </div>
     </div>
   </fieldset>
 
