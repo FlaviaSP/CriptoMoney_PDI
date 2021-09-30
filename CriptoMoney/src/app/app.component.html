@@ -9,31 +9,34 @@
       <p class="menu-text">InvertCripto</p>
     
   
-   
+   <ul class="list-style-none">
     <img
     class="cambio"
     alt="Cambio"
     src="assets/img/cambio.png"/>
-    <p class="cambio-text">Câmbio</p>
+    <li><a href="" class="cambio-text">Câmbio</a></li>
+    
     
 
   <img
       class="carteira"
       alt="Carteira"
       src="assets/img/carteira.png"/>
-      <p class="carteira-text">Carteiras</p>
+      <li><a href="" class="carteira-text">Carteiras</a></li>
+      
 
   <img
     class="configuracao"
     alt="Configuracao"
     src="assets/img/configuracao.png"/>  
-    <p class="configuracao-text">Configurações</p>
-
+    <li><a href="" class="configuracao-text">Configurações</a></li>
+    
   <img
       class="ajuda"
       alt="ajuda"
       src="assets/img/ajuda.png"/> 
-      <p class="ajuda-text">Ajuda</p>
+      <li><a href="" class="ajuda-text">Ajuda</a></li>
+    </ul>
     
   </div>
 
@@ -49,7 +52,7 @@
     de novas unidades da moeda.</p>
 
     <div class="botao-vamos">
-      <button class="texto-botao">Vamos converter</button>
+      <button class="texto-botao" (click)="direcionar()">Vamos converter</button>
     <img src="assets/img/seta.png">
     </div>
   </div>
@@ -68,7 +71,7 @@
       <p class="tabela-texto">Converta sua moeda</p>
       <div class="inline-flex">
         
-        <input type="text" class="input" [(ngModel)]="valor">
+        <input type="text" class="input" id="inputConverter" [(ngModel)]="valor">
 
         <div class="">
           <button class="botao-converter margin-left-16" (click)="converter()">Converter</button>

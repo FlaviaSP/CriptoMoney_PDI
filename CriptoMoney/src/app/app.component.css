@@ -227,6 +227,10 @@ color: #FFFFFF;
   border-radius: 8px;
 }
 
+.list-style-none {
+  list-style: none;
+}
+
  .margin-top-20 {
      margin-top: 20%;
  }

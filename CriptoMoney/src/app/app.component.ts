@@ -33,9 +33,22 @@ export class AppComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
+  direcionar() {
+    console.log("entrou no direcionar")
+    this.scrollToBottom()
+  }
+
+  scrollToBottom(){
+    const inputConverter = document.getElementById("inputConverter");
+    inputConverter && inputConverter.scrollIntoView(false);
+  }
+  
+
   regraDeTres(valorTotalMoeda:number, valorDoInput:number){
     return valorDoInput/valorTotalMoeda;
   }
+
+  
   converter(){
     this.http.get<Moeda[]>(
       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=' + this.moeda + '&order=market_cap_desc&per_page=100&page=1&sparkline=false'
