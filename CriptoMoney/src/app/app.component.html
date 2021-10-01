@@ -1,87 +1,72 @@
 <div class="div-principal">
-
-  <div class="menu cabecalho" >
+  <div class="cabecalho" >
+    <img  alt="InvertCripto"
+          class="logo"
+          src="assets/img/logo2.png"/>
+    <p class="logo-text">InvertCripto</p>
     
-    <img
-      alt="InvertCripto"
-      class="logo"
-      src="assets/img/logo2.png"/>
-      <p class="menu-text">InvertCripto</p>
-    
-  
-   <ul class="list-style-none">
-    <img
-    class="cambio"
-    alt="Cambio"
-    src="assets/img/cambio.png"/>
+  <ul class="list-style-none cabecalho-text">
+    <img  alt="Cambio"
+          class="cambio"
+          src="assets/img/cambio.png"/>
     <li><a href="" class="cambio-text">Câmbio</a></li>
     
-    
-
-  <img
-      class="carteira"
-      alt="Carteira"
-      src="assets/img/carteira.png"/>
+    <img  alt="Carteira"
+          class="carteira"
+          src="assets/img/carteira.png"/>
       <li><a href="" class="carteira-text">Carteiras</a></li>
-      
 
-  <img
-    class="configuracao"
-    alt="Configuracao"
-    src="assets/img/configuracao.png"/>  
+    <img  alt="Configuracao"
+          class="configuracao"
+          src="assets/img/configuracao.png"/>  
     <li><a href="" class="configuracao-text">Configurações</a></li>
     
-  <img
-      class="ajuda"
-      alt="ajuda"
-      src="assets/img/ajuda.png"/> 
+    <img  alt="ajuda"
+          class="ajuda"
+          src="assets/img/ajuda.png"/> 
       <li><a href="" class="ajuda-text">Ajuda</a></li>
-    </ul>
-    
-  </div>
+  </ul>
+</div>
 
-
-  <div class="margin-top-20 ">
+<div class="margin-top-20">
   <div class="inline-block width-40">
-    <p class="bemvindo bemvindo2">Bem vindo</p>
+    <p class="bemvindo borda-bemvindo">Bem vindo</p>
     <p class="titulo">Um simples conversor de Criptomoedas para o Real Brasileiro.</p>
-    <p class="texto2">Uma criptomoeda ou cibermoeda é um meio de troca,<br>
+    <p class="texto-principal">Uma criptomoeda ou cibermoeda é um meio de troca,<br>
     Podendo ser centralizado ou descentralizado que se <br>
     utiliza da tecnologia de blockchain e da criptografia<br>
     para assegurar a validade das transações e a criação<br>
     de novas unidades da moeda.</p>
 
-    <div class="botao-vamos">
-      <button class="texto-botao" (click)="direcionar()">Vamos converter</button>
+  <div class="botao-vamos">
+    <button class="texto-botao" (click)="direcionar()">Vamos converter</button>
     <img src="assets/img/seta.png">
-    </div>
   </div>
-  <div  class="inline-block width-40 img">
+  </div>
+
+  <div  class="inline-block width-40 imagem-principal">
     <img src="assets/img/myProjetCriptoMoney.png">
   </div>
-  </div>
+</div>
 
-  <div class="linha">
-    <hr/>
-  </div>
+<div class="linha">
+  <hr/>
+</div>
 
-  
-  <fieldset class="fieldset">
-    <div class="margin-top-5 margin-left-2">
-      <p class="tabela-texto">Converta sua moeda</p>
-      <div class="inline-flex">
-        
-        <input type="text" class="input" id="inputConverter" [(ngModel)]="valor">
-
-        <div class="">
-          <button class="botao-converter margin-left-16" (click)="converter()">Converter</button>
-        </div>
+<fieldset class="fieldset">
+  <div class="margin-top-5 margin-left-2">
+    <p class="tabela-titulo">Converta sua moeda</p>
+    <div class="inline-flex">
+      <input type="text" class="borda-input"  [(ngModel)]="valor">
+      <div>
+        <button class="botao-converter" (click)="converter()">Converter</button>
       </div>
     </div>
-    <div class="tabela-principal">
+  </div>
+    <div class="tabela-principal" id="inputConverter">
     <table class="table ">
-      <thead class="font-principal ">
-        <tr class="border-radius-8">
+      <thead class="table-cabecalho">
+        <tr>
           <th >
             Coin
           </th>
@@ -122,7 +107,6 @@
     <div class="paginacao">
       <pagination-controls class="write" (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
     </div>
-    </div>
-  </fieldset>
-
+  </div>
+</fieldset>
 </div>
