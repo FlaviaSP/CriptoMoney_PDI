@@ -3,13 +3,13 @@
     <img  alt="InvertCripto"
           class="logo"
           src="assets/img/logo2.png"/>
-    <p class="logo-text">InvertCripto</p>
+    <li><a routerlink="Home" class="logo-text">InvertCripto</a> </li>
     
   <ul class="list-style-none cabecalho-text">
     <img  alt="Cambio"
           class="cambio"
           src="assets/img/cambio.png"/>
-    <li><a href="" class="cambio-text">Câmbio</a></li>
+    <li><a routerlink="tela-cambio" class="cambio-text">Câmbio</a></li>
     
     <img  alt="Carteira"
           class="carteira"
@@ -26,6 +26,7 @@
           src="assets/img/ajuda.png"/> 
       <li><a href="" class="ajuda-text">Ajuda</a></li>
   </ul>
+ <router-outlet></router-outlet>
 </div>
 
 <div class="margin-top-20">
@@ -54,59 +55,7 @@
 </div>
 
 <fieldset class="fieldset">
-  <div class="margin-top-5 margin-left-2">
-    <p class="tabela-titulo">Converta sua moeda</p>
-    <div class="inline-flex">
-      <input type="text" class="borda-input"  [(ngModel)]="valor">
-      <div>
-        <button class="botao-converter" (click)="converter()">Converter</button>
-      </div>
-    </div>
-  </div>
-    <div class="tabela-principal" id="inputConverter">
-    <table class="table ">
-      <thead class="table-cabecalho">
-        <tr>
-          <th >
-            Coin
-          </th>
-          <th>
-            Price
-          </th>
-          <th>
-            Price Change
-          </th>
-          <th>
-            24h Volume
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let moeda of moedas | paginate: { itemsPerPage: 10, currentPage: paginaAtual }; let i = index">
-            <td>
-              <img [src]="moeda.image" alt="{{moeda.name}}" style="width: 2rem;">
-              <span>
-                {{moeda.name}}
-              </span>
-              <span>
-                {{moeda.symbol}}
-              </span>
-            </td>
-            <td>
-              {{moeda.current_price.toLocaleString("pt-BR", { minimumFractionDigits: 6 })}}
-            </td>
-            <td>
-              {{moeda.price_change_percentage_24h.toLocaleString()}}
-            </td>
-            <td>
-              {{moeda.total_volume.toLocaleString()}}
-            </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="paginacao">
-      <pagination-controls class="write" (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
-    </div>
-  </div>
+  <app-tabela-converte-moeda></app-tabela-converte-moeda>
 </fieldset>
+  
 </div>
